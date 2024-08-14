@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce WEBSITE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+<style>
+  .link {
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 30px;
+  word-spacing: 10px;
+  padding-left: 20px;
+}
+.front, .two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 4px outset greenyellow;
+  align-items: center;
+}
+.two {
+  margin: 0 auto;
+  justify-content: center;
+}
+.three {
+  font-size: 62px;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn1, .btn2, .btn3, .btn4, .btn5, .btn6 {
+  border: none;
+  background-color: transparent;
+}
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover, .btn5:hover, .btn6:hover {
+  background-color: greenyellow;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 2px 2px black;
+  cursor: pointer;
+}
+.img1 {
+  height: 200px;
+  width: 200px;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.first {
+  border: 1px solid gray;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: .4s;
+  background: #f0ececde;
+  text-align: center;
+  padding: 10px;
+}
+.first:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px, -8px);
+}
+.container {
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer; 
+  margin-top: 50px;
+  border: 4px outset greenyellow;
+  background-color: rgb(238, 233, 233);
+  text-align: center;
+}
+.container img {
+  height: 200px;
+  width: 200px;
+  filter: grayscale(.4);
+  transition: .3s;
+}
+.container img:hover {
+  filter: grayscale(0);
+  transform: scale(1.3) rotate(7deg);
+}
+h3 {
+  font-size: 30px;
+  margin: 0;
+  padding-top: 10px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+.content {
+  width: 20%;
+  margin: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: .4s;
+  background: #f0ececde;
+}
+.content:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px, -8px);
+}
+img {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+h6 {
+  font-size: 26px;
+  color: red;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+li {
+  padding: 5px;
+}
+.fa {
+  font-size: 26px;
+  transition: .4s;
+}
+.checked {
+  color: orange;
+}
+.fa:hover {
+  transform: scale(1.3);
+  transition: .6s;
+}
+
+@media(max-width: 1000px) {
+  .content {
+    width: 45%;
+  }
+}
+
+@media(max-width: 600px) {
+  .content {
+    width: 100%;
+  }
+  .three {
+    font-size: 40px;
+  }
+}
+/* Basic Styling for Footer */
+footer {
+border: 1px solid #ccc;
+padding: 20px;
+}
+
+.footer-container {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 20px;
+}
+
+.footer-section {
+display: flex;
+flex-direction: column;
+}
+
+.footer-section h1 {
+margin-top: 0;
+}
+
+.footer-section p, .footer-section a {
+margin: 5px 0;
+color: #333;
+text-decoration: none;
+}
+
+.footer-section a:hover {
+text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+.footer-container {
+grid-template-columns: 1fr 1fr;
+}
+}
+
+@media (max-width: 768px) {
+.footer-container {
+grid-template-columns: 1fr;
+}
+
+.footer-section ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-section li {
+display: inline;
+margin-right: 10px;
+}
+}
+</style>
+<body>
+  <div class="front"style=" background-image: linear-gradient(to top right,yellowgreen,white,green);">
+    <h1 style="color: greenyellow;text-shadow: 2px 2px 8px black;font-size: 40px">Store</h1>
+    <div class="link">
+      <button class="btn1"><a href="newone.html" style="text-decoration: none;text-shadow: 2px 2px 8px black;color: black;">Home</a></button>
+      <button class="btn2"><a href="services.html" style="text-decoration: none;text-shadow: 2px 2px 8px black;color: black;">Services</a></button>
+      <button class="btn3"><a href="trending.html" style="text-decoration: none;text-shadow: 2px 2px 8px black;color: black;">Trending</a></button>
+      <button class="btn4"><a href="review.html" style="text-decoration: none;text-shadow: 2px 2px 8px black;color: black;">Reviews</a></button>
+      <button class="btn5"><a href="signup.html" style="text-decoration: none;text-shadow: 2px 2px 8px black;color: black;">Signin</a></button>
+    </div>
+  </div>
+
+  <div class="two"style=" background-image: linear-gradient(to top right,yellowgreen,white,green);">
+    <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600" class="image" alt="Shoe Store" style="width: 500px;height: 500px;">
+    <div class="three">
+      <h2><b style="color: green;text-shadow: 2px 2px 8px black;">Shoe</b> Store<br>Your <b style="color: green;text-shadow: 2px 2px 8px black;">Comfort</b><br>Matters
+        <button class="btn6" style="text-shadow: 2px 2px 8px black;border: 1px solid greenyellow;">Let's Buy</button>
+      </h2>
+    </div>
+  </div>
+ 
+  <div class="container" style=" background-image: linear-gradient(to top right,yellowgreen,white,green);">
+    <p style="font-size: 50px; text-align: center; text-shadow: 2px 2px 4px black;">Our <b style="color: greenyellow; text-shadow: 2px 2px 4px black;">Services</b></p>
+    <div class="images">
+      <div class="first">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe72y76bPeaeM29vPWDBW69frzGLCICpEdvw&s" class="img1" alt="Service 1">
+        <p style="font-size:20px; color: black;">User</p>
+        <p style="font-size:20px;"><a href="veg.html" style="color: greenyellow; text-decoration: none; text-shadow: 2px 2px 4px black;font-size: 30px;">Satisfaction</a></p>
+      </div>
+      <div class="first">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRftYqoePnQP46tqKKmZEFSVNo0i2Vv3bEpmQ&s" class="img1" alt="Service 2">
+        <p style="font-size:20px; color: black;">24/7 Customer</p>
+        <p style="font-size:20px;"><a href="nonveg.html" style="color: greenyellow; text-decoration: none; text-shadow: 2px 2px 4px black;font-size: 30px;">Support</a></p>
+      </div>
+      <div class="first">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnKhQkWgNorBQbZcpF7Ydofm-aqq-awuxzSQ&s" class="img1" alt="Service 3">
+        <p style="font-size:20px; color: black;">Superfast</p>
+        <p style="font-size:20px;"><a href="about.html" style="color: greenyellow; text-decoration: none; text-shadow: 2px 2px 4px black;font-size: 30px;">Delivery</a></p>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="text-align: center;font-size: 50px;">Trending <b style="color: greenyellow;text-shadow: 2px 2px 8px black;">Shoes</b></h3>
+  <header>
+  <div class="gallery" style=" background-image: linear-gradient(to top right,yellowgreen,white,green);">
+  <div class="content">
+      <h3>For Boys</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8cuUUiBLo9WcPhs_OzExJLiqBpblnhGZb3w&s">
+           <h6>$100.00</h6>
+           <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+           </ul>
+           <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+  </div>
+  <div class="content">
+    <h3>For Boys</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrIna1rdAtzCqK5r6PWm-tohYgJ36rOXxLwA&s" alt="">
+         <h6>$120.00</h6>
+         <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+         </ul>
+         <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+</div>
+<div class="content">
+  <h3>For Boys</h3>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO6UoUNYvRR57bSLIITqjkfBilILydKIbYag&s" alt="">
+  
+       <h6>$110.00</h6>
+       <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+       </ul>
+       <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+</div>
+<div class="content">
+  <h3>For Boys</h3>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWEG2QbsAv0S7ekzJa4QrZruJXPCVmY6lxSw&s" alt="">
+  
+       <h6>$150.00</h6>
+       <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+       </ul>
+       <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+</div>
+</div>
+</header>
+<header>
+  <div class="gallery"style=" background-image: linear-gradient(to top right,yellowgreen,white,green);">
+  <div class="content">
+      <h3>For Girls</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWq4ry6m-yArRbh44Z61PGVLBpyfxWar7Xwg&s">
+    
+           <h6>$200.00</h6>
+           <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+           </ul>
+           <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+  </div>
+  <div class="content">
+    <h3>For Girls</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy6BlpXOcAZOK9ntoIKKcEkuWTU5Il2p9LzA&s" alt="">
+    
+         <h6>$210.00</h6>
+         <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+         </ul>
+         <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+</div>
+<div class="content">
+  <h3>For Girls</h3>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThkyXt0ZGtqVOHNBz37wnntJrEBSuisdR-KA&s" alt="">
+  
+       <h6>$250.00</h6>
+       <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+       </ul>
+       <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+</div>
+<div class="content">
+  <h3>For Girls</h3>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCVxK501KR8q3BEHGaUoQDiU0QYndqFVi4Q&s" alt="">
+ 
+       <h6>$190.00</h6>
+       <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+       </ul>
+       <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+</div>
+</div>
+</header>
+<header>
+  <div class="gallery"style=" background-image: linear-gradient(to top right,yellowgreen,white,green);">
+  <div class="content">
+    <h3>For Kids</h3>
+      
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThaKKL5ELigoJGzxURZdvIddS125ffcYO70Q&s" style="border-radius: 50%;">
+      <h6>$210.00</h6>
+           <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+           </ul>
+           <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+  </div>
+  <div class="content">
+    <h3>For Kids</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfm_L5W7ka0MvgwqaBE1NsoGJF9cwy1c4bvA&s" style="border-radius: 50%;">
+    <h6>$200.00</h6>
+         <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+         </ul>
+         <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+</div>
+<div class="content">
+  <h3>For Kids</h3>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxDmuCk2O8hPIKpZh_macWuOfMw6Dblww6lg&s" style="border-radius: 50%;;">
+  <h6>$210.00</h6>
+       <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+       </ul>
+       <button class="buy-1" style="background-color: blue;border-radius: 30px;padding: 10px;">Buy Now</button>
+</div>
+  </div></header>
+  <div class="container">
+    <p style="font-size: 50px; text-align: center; text-shadow: 2px 2px 4px black;color: yellowgreen;">Reviews</p>
+    <div class="images">
+      <div class="first">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4uS9LiS-HHUGoGWbddPXpNmJARESuJ76tWg&s" class="img1" alt="Service 1"style="border-radius: 50%;">
+        
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+       </ul>
+        <p style="font-size:20px;"><a href="" style="color: black; text-decoration: none; text-shadow: 2px 2px 4px black;">Nice shoes i liked its quality</a></p>
+      </div>
+      <div class="first">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5HccHi8AbCCT3nrLI_ah1087q59HCN0pjQQ&s" class="img1" alt="Service 2"style="border-radius: 50%;">
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+       </ul>
+        <p style="font-size:20px;"><a href="" style="color: black; text-decoration: none; text-shadow: 2px 2px 4px black;">Shoe looks good.... quality is very nice.... </a></p>
+      </div>
+      <div class="first">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrM_L1i-pe45tXFE82iQ0NSEl3VQk0IwjXA&s" class="img1" alt="Service 3" style="border-radius: 50%;">
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+       </ul>
+        <p style="font-size:20px;"><a href="" style="color: black; text-decoration: none; text-shadow: 2px 2px 4px black;">Super product i love it thank you</a></p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container" style="border: 1px solid black;background: rgb(165, 162, 162); background-image: linear-gradient(to top right,yellowgreen,white,green);">
+      <div class="footer-section">
+        <h1>Services</h1>
+        <p><a href="#">Pages</a></p>
+        <p><a href="#">Blog</a></p>
+        <p><a href="#">Contacts</a></p>
+        <p><a href="#">Affiliate</a></p>
+        <p><a href="#">Work</a></p>
+      </div>
+      <div class="footer-section">
+        <h1>Pages</h1>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Terms and Conditions</a></p>
+        <p><a href="#">Disclaimer</a></p>
+      </div>
+      <div class="footer-section">
+       
+        <ul>
+          
+          <li>Follow.....<i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-whatsapp"></i></li>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
